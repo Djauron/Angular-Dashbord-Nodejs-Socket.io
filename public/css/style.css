@@ -1,0 +1,122 @@
+#firstDash
+{
+    float: left;
+}
+
+#secondDash
+{
+    float: right;
+}
+
+#dashbord
+{
+    width: 60%;
+    margin: auto;
+    border: solid 1px black;
+    background-color: #F0F0F0;
+}
+
+#map
+{
+    height: 400px;
+    width: 100%;
+}
+
+#gps_status
+{
+    clear: both;
+    text-align: center;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+}
+
+h1
+{
+    text-align: center;
+}
+
+body {
+    font: normal 16px/1.5 'Roboto', sans-serif;
+    padding: 130px 0 0 0;
+    background: #f1f1f1;
+}
+
+.chart-skills {
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+}
+
+.chart-skills *,
+.chart-skills::before {
+    box-sizing: border-box;
+}
+
+
+/* CHART-SKILLS STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.chart-skills {
+    position: relative;
+    width: 350px;
+    height: 175px;
+    overflow: hidden;
+}
+
+.chart-skills::before,
+.chart-skills::after {
+    position: absolute;
+}
+
+.chart-skills::before {
+    content: '';
+    width: inherit;
+    height: inherit;
+    border: 45px solid #C0C0C0;
+    border-bottom: none;
+    border-top-left-radius: 175px;
+    border-top-right-radius: 175px;
+}
+
+.chart-skills::after {
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: cadetblue;
+}
+
+.chart-skills li {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border: 45px solid;
+    border-top: none;
+    border-bottom-left-radius: 175px;
+    border-bottom-right-radius: 175px;
+    transform-origin: 50% 0;
+}
+
+.chart-skills .temp {
+    z-index: 4;
+    border-color: red;
+}
+
+.chart-skills .humidity {
+    z-index: 4;
+    border-color: blue;
+}
+
+.chart-skills span {
+    position: absolute;
+    font-size: 1.5rem;
+}
+
+.chart-skills li span {
+    top: 5px;
+    left: 10px;
+    transform: rotate(-90deg);
+}

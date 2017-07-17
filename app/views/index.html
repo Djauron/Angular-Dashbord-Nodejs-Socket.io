@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>Actility test</title>
+    <meta charset ="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body ng-app="myApp">
+
+<div rota id="dashbord" ng-controller="dataInfo">
+    <div id="firstDash">
+        <ul class="chart-skills">
+            <li class="temp">
+                <span>{[{infos.temperature}]}C</span>
+            </li>
+        </ul>
+        <h1>Temperature</h1>
+    </div>
+    <div id="secondDash">
+        <ul class="chart-skills">
+            <li class="humidity">
+                <span>{[{infos.humidity}]}%</span>
+            </li>
+        </ul>
+        <h1>Humidity</h1>
+    </div>
+    <div id="gps_status">
+        <h1>Last Status :</h1>
+        <h2 id="onOff"></h2>
+    </div>
+    <div id="thirdDash">
+        <div id="map" map></div>
+    </div>
+</div>
+
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="/js/core/app.js"></script>
+<script src="/js/controller/dataInfoController.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsWIyKzZ2fkbBMSe3sRSMLue7bA47s2Qc">
+</script>
+<script src="/js/directive/directive.js"></script>
+</body>
+</html>
