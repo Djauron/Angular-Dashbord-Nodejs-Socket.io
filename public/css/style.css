@@ -30,6 +30,11 @@
     border-bottom: solid 1px black;
 }
 
+#myDiv
+{
+    width: auto;
+}
+
 h1
 {
     text-align: center;
@@ -51,10 +56,6 @@ body {
 .chart-skills::before {
     box-sizing: border-box;
 }
-
-
-/* CHART-SKILLS STYLES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .chart-skills {
     position: relative;
@@ -108,15 +109,4 @@ body {
 .chart-skills .humidity {
     z-index: 4;
     border-color: blue;
-}
-
-.chart-skills span {
-    position: absolute;
-    font-size: 1.5rem;
-}
-
-.chart-skills li span {
-    top: 5px;
-    left: 10px;
-    transform: rotate(-90deg);
 }

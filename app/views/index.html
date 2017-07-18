@@ -9,27 +9,26 @@
 </head>
 <body ng-app="myApp">
 
-<div rota id="dashbord" ng-controller="dataInfo">
+<div graph id="dashbord" ng-controller="dataInfo">
     <div id="firstDash">
         <ul class="chart-skills">
-            <li class="temp">
-                <span>{[{infos.temperature}]}C</span>
-            </li>
+            <li class="temp"></li>
         </ul>
+        <span>{[{infos.temperature}]}C</span>
         <h1>Temperature</h1>
     </div>
     <div id="secondDash">
         <ul class="chart-skills">
             <li class="humidity">
-                <span>{[{infos.humidity}]}%</span>
-            </li>
         </ul>
+        <span>{[{infos.humidity}]}%</span>
         <h1>Humidity</h1>
     </div>
     <div id="gps_status">
         <h1>Last Status :</h1>
         <h2 id="onOff"></h2>
     </div>
+    <div id="myDiv" style="height: 400px;"></div>
     <div id="thirdDash">
         <div id="map" map></div>
     </div>
@@ -38,6 +37,7 @@
 
 
 <script src="/socket.io/socket.io.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script src="/js/core/app.js"></script>
 <script src="/js/controller/dataInfoController.js"></script>

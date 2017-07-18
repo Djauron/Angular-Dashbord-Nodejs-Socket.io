@@ -1,3 +1,4 @@
+// show value in HTML Controller of Angular
 app.controller("dataInfo", function($scope, socket) {
     socket.on('jsonReq', function(data){
         $scope.infos = {

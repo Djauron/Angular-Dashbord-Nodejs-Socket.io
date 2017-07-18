@@ -1,3 +1,5 @@
+// NodeJs APP
+
 var express = require('express');
 var app = express();
 var server = require('http').createServer(app);
@@ -8,7 +10,6 @@ var engines = require('consolidate');
 
 app.use(bodyParser.json());
 app.set('views', path.join('./app/', 'views'));
-app.use(express.static(__dirname + '/node_modules'));
 
 app.engine('html', engines.mustache);
 app.set('view engine', 'html');
@@ -23,8 +24,7 @@ app.get('/result', function(req, res){
     res.render('index');
 });
 
-
-require('./app/socket/socket.js')(io);
+// If you need other page you can config it with route.js and IoTController
 //require('./app/config/route.js')(app);
 
 
